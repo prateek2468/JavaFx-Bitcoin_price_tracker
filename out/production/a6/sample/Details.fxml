@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<?import javafx.scene.Cursor?>
+<BorderPane prefHeight="400.0" prefWidth="600.0" stylesheets="@details.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.DetailsController">
+   <top>
+   <ImageView fitHeight="93.0" fitWidth="410.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+      <image>
+         <Image url="@images/CoinTracker-1.png" />
+      </image>
+      <effect>
+         <ColorAdjust brightness="0.69" contrast="1.0" hue="1.0" saturation="-1.0" />
+      </effect>
+      <BorderPane.margin>
+         <Insets bottom="10.0" top="20.0" />
+      </BorderPane.margin>
+   </ImageView>
+</top>
+<center>
+<VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+   <children>
+      <HBox fx:id="BTChbox" alignment="CENTER_LEFT" onMouseClicked="#buttonClicked" prefHeight="100.0" prefWidth="200.0" styleClass="hbox-1">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/Bitcoin.png" />
+               </image>
+               <HBox.margin>
+                  <Insets left="40.0" />
+               </HBox.margin>
+            </ImageView>
+            <Label fx:id="labelBTC" textFill="#2bff00">
+               <font>
+                  <Font name="Calibri Italic" size="69.0" />
+               </font>
+            </Label>
+         </children>
+         <VBox.margin>
+            <Insets left="20.0" right="20.0" />
+         </VBox.margin>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </HBox>
+      <HBox fx:id="ETHhbox" alignment="CENTER_LEFT" onMouseClicked="#buttonClicked" prefHeight="100.0" prefWidth="200.0" styleClass="hbox-2">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/Ethereum.png" />
+               </image>
+               <HBox.margin>
+                  <Insets left="40.0" />
+               </HBox.margin>
+            </ImageView>
+            <Label fx:id="labelETH" textFill="#3ceb09">
+               <font>
+                  <Font name="Calibri Italic" size="69.0" />
+               </font>
+            </Label>
+         </children>
+         <VBox.margin>
+            <Insets left="20.0" right="20.0" />
+         </VBox.margin>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </HBox>
+   </children>
+</VBox>
+</center>
+</BorderPane>

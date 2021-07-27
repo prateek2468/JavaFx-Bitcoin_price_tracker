@@ -1,0 +1,13 @@
+.chart-series-line{
+    -fx-stroke-width: 3px;
+}
+
+/* change the color of the line*/
+.default-color0.chart-series-line{
+    -fx-stroke : #EC954E;
+}
+/* getting rid of the symbols*/
+
+.default-color0.chart-line-symbol{
+    -fx-background-color:transparent , transparent;
+}

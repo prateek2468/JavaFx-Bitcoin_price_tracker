@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="sample.ChartController"
+            prefHeight="400.0" prefWidth="600.0">
+
+    <top>
+        <GridPane minHeight="50.0" prefWidth="50.0" BorderPane.alignment="CENTER">
+            <columnConstraints>
+                <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="50.0" />
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="150.0" />
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="150.0" />
+                <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="50.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <ImageView fx:id="backArrow" fitHeight="55.0" fitWidth="57.0" onMouseClicked="#backClicked" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@images/BackArrow.png" />
+                    </image>
+                    <effect>
+                        <ColorAdjust brightness="-1.0" contrast="1.0" hue="1.0" saturation="-1.0" />
+                    </effect>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </ImageView>
+                <ImageView disable="true" fitHeight="73.0" fitWidth="56.0" opacity="0.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3">
+                    <image>
+                        <Image url="@images/Bitcoin.png" />
+                    </image>
+                    <effect>
+                        <ColorAdjust />
+                    </effect>
+                </ImageView>
+                <ComboBox fx:id="CoinSelector" onAction="#onCoinChanged" prefWidth="150.0" GridPane.columnIndex="1">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="Bitcoin" />
+                            <String fx:value="Ethereum" />
+                            <String fx:value="All" />
+
+                        </FXCollections>
+                    </items>
+                    <value>
+                        <String fx:value="Bitcoin" />
+                    </value>
+                </ComboBox>
+                <ComboBox fx:id="DateRange" onAction="#onDateRangeChanged" prefWidth="150.0" GridPane.columnIndex="2">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="Year" />
+                            <String fx:value="90 days" />
+                            <String fx:value="60 days" />
+                            <String fx:value="30 days" />
+                            <String fx:value="week" />
+
+                        </FXCollections>
+                    </items>
+                    <value>
+                        <String fx:value="Year" />
+                    </value>
+                </ComboBox>
+            </children>
+            <BorderPane.margin>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </BorderPane.margin>
+        </GridPane>
+    </top>
+    <center>
+        <LineChart fx:id="priceChart" title="Price over Time " BorderPane.alignment="CENTER">
+            <xAxis>
+                <NumberAxis side="BOTTOM" />
+            </xAxis>
+            <yAxis>
+                <NumberAxis side="LEFT" />
+            </yAxis>
+        </LineChart>
+    </center>
+
+</BorderPane>

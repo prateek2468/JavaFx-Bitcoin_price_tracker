@@ -1,0 +1,30 @@
+/* for background color of the whole layout*/
+
+BorderPane{
+-fx-background-color : #800080;
+}
+
+/*for the first H-Box containing both Bitcoin and etherium price and image */
+
+HBox{
+-fx-background-radius: 50;
+-fx-background-color : #888;
+
+}
+
+/* coloring the bitcoin h-box */
+.hbox-1{
+-fx-background-color: #886B2C;
+}
+
+/* coloring the etherium h-box */
+
+.hbox-2{
+-fx-background-color: #3D8E4E;
+}
+
+/* spacing between 2 h-boxes in the v box */
+
+VBox {
+-fx-spacing:35px;
+}
