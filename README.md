@@ -24,7 +24,7 @@ $ git clone https://github.com/prateek2468/JavaFx-Bitcoin_price_tracker.git
 Navigate to the project directory:
 
 ```
-$ cd bitcoin-ethereum-price-tracker
+$ cd sample
 ```
 
 Import the project into your preferred Java IDE (e.g., IntelliJ, Eclipse):
@@ -42,3 +42,18 @@ JavaFX: A platform for creating desktop applications using Java.
 REST APIs: External APIs providing real-time and historical cryptocurrency price data.
 
 Chart Libraries: Utilized libraries for creating interactive and visually appealing charts to display cryptocurrency price trends.
+
+
+## Screenshots
+
+<img width="387" alt="image" src="https://github.com/prateek2468/JavaFx-Bitcoin_price_tracker/assets/69041894/b7414287-cbdb-4d97-8c16-c218939f8d08">
+
+Real-time Price Tracking
+
+<img width="434" alt="image" src="https://github.com/prateek2468/JavaFx-Bitcoin_price_tracker/assets/69041894/6772f0ec-32fb-4fe0-b982-c846fa47985e">
+
+Historical Price Charts
+
+<img width="451" alt="image" src="https://github.com/prateek2468/JavaFx-Bitcoin_price_tracker/assets/69041894/31940dee-98bb-4d61-84f8-10f7bb311caf">
+
+Cryptocurrency Comparison
