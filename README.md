@@ -17,14 +17,13 @@ Follow these steps to get the Bitcoin and Ethereum Price Tracker App up and runn
 
 Clone the repository:
 
-sh
-Copy code
-git clone https://github.com/your-username/bitcoin-ethereum-price-tracker.git
+
+
+$ git clone https://github.com/your-username/bitcoin-ethereum-price-tracker.git
 Navigate to the project directory:
 
-sh
-Copy code
-cd bitcoin-ethereum-price-tracker
+
+$ cd bitcoin-ethereum-price-tracker
 Import the project into your preferred Java IDE (e.g., IntelliJ, Eclipse):
 Open the project in your IDE and ensure that JavaFX and relevant dependencies are properly configured.
 
